@@ -184,3 +184,5 @@ def player_numbers(team_name)
   end
   output.sort
 end
+
+def player_stats
