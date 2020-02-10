@@ -237,3 +237,32 @@ def most_points_scored
   end
   player_with_most_points
 end
+
+def winning_team
+  home_score = 0
+  away_score = 0
+  
+  game_hash.each do |status, team|
+    team[:players].each do |team_player|
+      if status.to_s == "home"
+        home_score += team_player[:points]
+      elsif status.to_s == "away"
+        away_score += team_player[:points]
+      end
+    end
+  end
+  return home_score > away_score ? game_hash[:home][:team_name] : game_hash[:away][:team_name] 
+end
+
+def player_with_longest_name
+  longest_name = ""
+  
+  game_hash.each do |status, team|
+    team[:players].each do |team_player|
+      if team_player[:player_name].length > longest_name.length
+        longest_name = team_player[:player_name]
+      end
+    end
+  end
+  player_with_most_points
+end
