@@ -267,7 +267,8 @@ def player_with_longest_name
   longest_name
 end
 
-def long_name_steals_a_ton?(longest_name)
+def long_name_steals_a_ton?
+  longest_name = player_with_longest_name(game_hash)
   longest_name_steals = 0
   other_most_steals = 0
   
