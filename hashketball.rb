@@ -189,13 +189,13 @@ def player_stats(player)
   game_hash.each do |status, team|
     team[:players].each do |team_player|
       if team_player[:player_name] == player
-        return team_player
+        return specifed_player_stats(team_player)
       end
     end
   end
 end
 
-def player_stats(player)
+def specifed_player_stats(player)
   {
     "assists": player[:assists],
     "blocks": player[:blocks],
