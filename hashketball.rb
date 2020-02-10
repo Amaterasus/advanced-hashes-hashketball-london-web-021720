@@ -185,4 +185,13 @@ def player_numbers(team_name)
   output.sort
 end
 
-def player_stats
+def player_stats(player)
+  game_hash.each do |status, team|
+    team[:players].each do |team_player|
+      if team_player[:player_name] == player
+        return team_player
+      end
+    end
+  end
+  nil
+end
