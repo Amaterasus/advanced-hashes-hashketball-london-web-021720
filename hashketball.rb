@@ -194,3 +194,16 @@ def player_stats(player)
     end
   end
 end
+
+def player_stats(player)
+  {
+    "assists": player[:assists],
+    "blocks": player[:blocks],
+    "number": player[:number],
+    "points": player[:points],
+    "rebounds": player[:rebounds],
+    "shoe": player[:shoe],
+    "slam_dunks": player[:slam_dunks],
+    "steals": player[:steals]
+  }
+end
