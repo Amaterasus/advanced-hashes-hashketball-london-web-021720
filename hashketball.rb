@@ -264,5 +264,5 @@ def player_with_longest_name
       end
     end
   end
-  player_with_most_points
+  longest_name
 end
