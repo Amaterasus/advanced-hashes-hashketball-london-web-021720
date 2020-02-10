@@ -207,3 +207,15 @@ def specifed_player_stats(player)
     "steals": player[:steals]
   }
 end
+
+def big_shoe_rebounds
+  output = 0
+  
+  game_hash.each do |status, team|
+    team[:players].each do |team_player|
+      if team_player[:player_name] == player
+        return team_player[:shoe]
+      end
+    end
+  end
+end
