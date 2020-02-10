@@ -280,4 +280,5 @@ def long_name_steals_a_ton?
         other_most_steals = team_player[:steals]
       end
   end
+  longest_name_steals > other_most_steals
 end
